@@ -50,7 +50,7 @@ export const SendMoney = () => {
                                         Authorization: "Bearer " + localStorage.getItem("token")
                                     }
                                 });
-                                navigate(./dashboard);
+                                navigate("/dashboard");
                             }}
                             className="justify-center rounded-md text-sm font-medium ring-offset-background transition-colors h-10 px-4 py-2 w-full bg-green-500 text-white">
                             Initiate Transfer
