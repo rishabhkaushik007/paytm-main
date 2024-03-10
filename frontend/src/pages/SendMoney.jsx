@@ -1,6 +1,9 @@
 import { useSearchParams } from 'react-router-dom';
 import axios from 'axios';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+const navigate = useNavigate();
 
 export const SendMoney = () => {
     
@@ -46,7 +49,8 @@ export const SendMoney = () => {
                                     headers: {
                                         Authorization: "Bearer " + localStorage.getItem("token")
                                     }
-                                })
+                                });
+                                navigate(./dashboard);
                             }}
                             className="justify-center rounded-md text-sm font-medium ring-offset-background transition-colors h-10 px-4 py-2 w-full bg-green-500 text-white">
                             Initiate Transfer
